@@ -1,2 +1,2 @@
-# summit
+# Summit
 SecTalks Summit website
