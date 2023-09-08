@@ -35,12 +35,23 @@
 			</h3>
 
 			<p class="txt-center m2-txt1 p-b-67">
-                A Summit to Celebrate Being Old!
-                <br />
                 11 November, 2023, Sydney, Australia
+                <br />
+                <br />
+                We have reserved an entire two-story arcade bar with all arcade games on free play!
+                <br /><br />
+                Early bird tickets are on sale now.
+                We have limited spots for this 1 in 10 years event!
 			</p>
 
+			<form class="flex-w flex-c-m" action="https://events.humanitix.com/sectalks-10th-year-anniversay-summit-2023/tickets">
+				<button class="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
+                    Get Tickets
+				</button>
+            </form>
 
+
+            <p><br /></p>
 			<div class="flex-w flex-sa-m cd100 bor1 p-t-42 p-b-22 p-l-50 p-r-50 respon1">
 				<div class="flex-col-c-m wsize2 m-b-20">
 					<span class="l1-txt2 p-b-4 days">249</span>
@@ -69,17 +80,23 @@
 				</div>
 			</div>
 
+            <p><br /></p>
             <!--<form class="flex-w flex-c-m contact100-form validate-form p-t-70">-->
 				<!--<div class="wrap-input100 validate-input where1" data-validate = "Email is required: ex@abc.xyz">
 					<input class="s1-txt1 placeholder0 input100" type="text" name="email" placeholder="Email Address">
 					<span class="focus-input100"></span>
                 </div>-->
 
-			<form class="flex-w flex-c-m contact100-form validate-form p-t-70" action="https://forms.gle/4kaUVjphARePrsfZ6">
+			<!--<form class="flex-w flex-c-m contact100-form validate-form p-t-70" action="https://forms.gle/4kaUVjphARePrsfZ6">
 				<button class="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
                     I want to contribute!
 				</button>
-            </form>
+            </form>-->
+
+
+            <iframe id="iframe-container" src="https://events.humanitix.com/event-listings?w=true&u=0O9i4Phua0YSK5Ksw9LzVDdiYTE2&o=64f6ff7f5616f2350e891699&bc=%23353337&bt=Get%20Tickets&tc=%23FFFFFF" width="100%" height="600px" frameborder="0"></iframe>
+
+
             <p class="txt-center s1-txt1">
                 <br><a href="mailto:guru@sectalks.org?subject=Summit Sponsorship">Sponsorship Pack</a>
             </p>
@@ -127,6 +144,19 @@
 	</script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
+
+    <script>
+        window.addEventListener('message', function (e) {
+            if (e.origin !== "https://events.humanitix.com"){
+                return;
+            }
+            var messageData = e.data;
+            var iframeEl = document.getElementById('iframe-container');
+            if (iframeEl && messageData && !isNaN(messageData.scrollHeight) && messageData.location === iframeEl.src) {
+                iframeEl.style.height = messageData.scrollHeight + 20 + 'px'; }
+        }, false);
+    </script>
+
 
 </body>
 </html>
